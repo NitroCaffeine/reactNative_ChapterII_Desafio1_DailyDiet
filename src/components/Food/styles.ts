@@ -13,12 +13,22 @@ type IconProps ={
 
 export const Container = styled.TouchableOpacity`
 
+  
     flex-direction: row;
     border: 1px solid #DDDEDF;
     border-radius: 6px;
     margin-top: 12px;
     padding: 14px 16px 14px 12px;
+    /* justify-content: space-evenly; */
+   
+
+`
+
+export const NameFoodAndHourContainer = styled.View`
+
+    flex-direction: row;
     align-items: center;
+    justify-content: start;
 
 `
 
@@ -61,27 +71,22 @@ export const Divider = styled.View`
 
 
 
-export const StatusIconStyle = (type: IconStyleProps) => {
-    const theme = useTheme()
-
-    return {
-           
-    }
-        
-      
-}
 
 //não funciona!!!!!
 export const StatusIcon = styled.View<IconProps>`
-
+/* 
         ${({theme, type}) => css`
         
-            width: 12px,
-            height: 12px,
-            border-radius: 12px,
-            background-color: ${type === 'PRIMARY' ? theme.colors.green_light : theme.colors.red_light}
+          
+            background-color: ${type === 'PRIMARY' ? theme.colors.green_light : theme.colors.red_light} 
             
 
         
         `}
+
+        width: 12px;
+            height: 12px;
+            border-radius: 12px;
+            align-self: end;
+            justify-self: end; */
 `

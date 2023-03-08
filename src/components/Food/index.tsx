@@ -1,5 +1,4 @@
-import { Container,Divider,Hour,NameFood,StatusIcon, StatusIconStyle } from "./styles";
-import {Circle} from 'phosphor-react-native'
+import { Container,Divider,Hour,NameFood, NameFoodAndHourContainer, StatusIcon } from "./styles";
 import { useTheme } from "styled-components/native";
 
 
@@ -19,9 +18,11 @@ export function Food({name, hour, inDiet}: FoodProps){
 
     return(
         <Container>
-            <Hour>{hour}</Hour>
-            <Divider/>
-            <NameFood>{name}</NameFood>
+            <NameFoodAndHourContainer>
+                <Hour>{hour}</Hour>
+                <Divider/>
+                <NameFood>{name}</NameFood>
+            </NameFoodAndHourContainer>
             {/* <Circle style={{
                 alignSelf: 'flex-end',
                 backgroundColor: status,

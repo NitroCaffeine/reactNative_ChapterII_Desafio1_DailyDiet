@@ -1,6 +1,6 @@
 
 import { Container } from "./styles"
-import { FlatList, SectionList, StyleSheet, Text, View } from 'react-native';
+import { FlatList, SectionList } from 'react-native';
 import { Header } from "@components/Header";
 import { Food } from "@components/Food";
 import { FoodHeader } from "@components/FoodHeader";
@@ -57,7 +57,7 @@ export function Home(){
     return(
         <Container>
             <Header/>
-            {/* {dados.map((item, index) => ( */}
+          
              <SectionList
 
               sections={dados}
@@ -69,11 +69,8 @@ export function Home(){
                 <FoodHeader dateTime={dateTime} />
               )}
              
-             
-             
-             
              />
-            {/* ))} */}
+          
            
         </Container>
     )
